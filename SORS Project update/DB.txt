@@ -1,0 +1,33 @@
+CREATE DATABASE university_db;
+USE university_db;
+
+CREATE TABLE registrations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(100),
+    email VARCHAR(100),
+    school_ssc VARCHAR(255),
+    year_ssc INT,
+    gpa_ssc DECIMAL(3,2),
+    college_hsc VARCHAR(255),
+    year_hsc INT,
+    gpa_hsc DECIMAL(3,2),
+    -- Paths for uploaded files
+    cert_ssc VARCHAR(255),
+    cert_hsc VARCHAR(255),
+    mark_ssc VARCHAR(255),
+    mark_hsc VARCHAR(255),
+    achievements VARCHAR(255),
+    activities TEXT,
+    -- Store checkboxes as comma-separated strings
+    participation TEXT,
+    skills TEXT,
+    sports TEXT,
+    interests TEXT,
+    family_income VARCHAR(50),
+    has_scholarship VARCHAR(10),
+    plan_to_shift VARCHAR(10),
+    first_choice_dept VARCHAR(50),
+    shifted_depts TEXT,
+    plan_after_grad VARCHAR(50),
+    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
